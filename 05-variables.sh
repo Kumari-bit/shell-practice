@@ -3,6 +3,6 @@
 
 echo  "Enter your pin number::"
 
-read -s PIN
+read PIN
 
 echo  "Your number is: $PIN"

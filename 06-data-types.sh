@@ -4,7 +4,7 @@ TIMESTAMP=$(date)
 
 echo "script executed at: $TIMESTAMP"
 
-NUMBER1=100
+NUMBER1=Kumari
 NUMBER2=200
 
 SUM=$(($NUMBER1+$NUMBER2))

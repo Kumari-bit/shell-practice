@@ -1,0 +1,21 @@
+- name: Kumari
+  lastname: D
+  email: kumarivenkata072@gmail.com
+  addresses:
+  - type: perm
+    doorno: 17
+    street: Ravoosnanda
+  - type: current
+    doorno: 143
+    street: Gandhinagar
+
+- name: Kumari
+  lastname: D
+  email: kumarivenkata072@gmail.com
+  addresses:
+  - type: perm
+    doorno: 17
+    street: Ravoosnanda
+  - type: current
+    doorno: 143
+    street: Gandhinagar

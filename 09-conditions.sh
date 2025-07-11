@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-NUMBER=$1
+NUMBER=[ $10 ]
 
 if [ $NUMBER -lt 10 ]
 then 

@@ -19,15 +19,24 @@ else
 # check already installed or not. if Installed $? is 0, then 
 # If not installed $? is not 0. expression is true
 
-if[ $? -ne 0]
+if [ $? -ne 0]
 then
 
 echo " mysql not installed going to install"
+dnf install mysql -y
 
-dnf install mysql-server -y
-
+if [ $? -eq 0 ]
+then
+        echo "Installing MySQL is ... SUCCESS"
+    else
+        echo "Installing MySQL is ... FAILURE"
+        exit 1
+    fi
 else
+ echo "Mysql is already installed nothing to do"
 
-echo "mysql is already install nothing to do"
+ fi
 
-fi
+ else
+  echo "Mysql is already installed nothing to do"
+  fi

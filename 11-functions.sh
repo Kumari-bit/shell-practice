@@ -35,7 +35,7 @@ dnf list installed Python
 if [ $? -ne 0 ]
 then
     echo"Python is not installed...going to install"
-    dnf list install python -y
+    dnf install python -y
     VALIDATE $? "Python"
 else
     echo"Python is already installed...nothing to do"

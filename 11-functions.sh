@@ -20,7 +20,7 @@ VALIDATE(){
 }
 
 dnf list installed mysql
-    if [ $? -nq 0]
+    if [ $? -ne 0 ]
     then
         echo "mysql is not installed...going to install"
         dnf install mysql -y
@@ -29,7 +29,7 @@ dnf list installed mysql
         fi
 
 dnf list installed python3
-    if [ $? -nq 0 ]
+    if [ $? -ne 0 ]
     then
         echo "Python3 is not installed....going to install"
         dnf install python3 -y

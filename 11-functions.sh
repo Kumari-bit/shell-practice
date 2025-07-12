@@ -17,6 +17,7 @@ VALIDATE(){
     else
         echo "Installing $2 is failure"
     fi
+}
 
 dnf list installed mysql
     if [ $? -nq 0]

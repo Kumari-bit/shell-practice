@@ -1,4 +1,4 @@
 #! /bin/bash
-echo "Hello world"
 
-cat >> kumari.txt
+dnf install htop -y
+echo "Installing htop"

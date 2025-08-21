@@ -38,12 +38,12 @@ else
     VALIDATE $? "nginx"
 fi
 
-dnf list installed Python
+dnf list installed Python3
 if [ $? -eq 0 ]
 then    
-    echo "Installing Python is success.....nothing to do"
+    echo "Installing Python3 is success.....nothing to do"
 else
-    echo "python is not installed.....going to install"
-    dnf install python -y
-    VALIDATE $? "Python"
+    echo "python3 is not installed.....going to install"
+    dnf install python3 -y
+    VALIDATE $? "Python3"
 fi

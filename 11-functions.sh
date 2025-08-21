@@ -1,30 +1,29 @@
 #!/bin/bash
-
 USER=$(id -u)
-
-if [ $USER -ne 0 ]
+if [ $USER -nq 0 ]
 then
-    echo "ERROR: Please run the script with root access"
+    echo "ERROR: Please run this script with  root access"
     exit 1
 else
-    echo "User is running with root access"
+    echo "your running with root access"
 fi
+
+VALIDATE() {
+    if [ $1 -eq 0 ]
+    then
+        echo "Installing $2 is success"
+    else
+        echo "Installing $2 is failure"
+        exit 1
+        fi
+    }
 
 dnf list installed mysql
-
-if [ $? -ne 0 ]
-then
-    echo "Mysql is not installed.....going to install it"
-    dnf install mysql -y
-    if [ $? -eq 0 ]
-    then
-        echo "Mysql installing....success"
-    else
-        echo "Mysql installing....failure"
-    exit 1
-fi
+if [ $? -eq 0 ]
+then    
+    echo "Installing mysql is success.....nothing to do"
 else
-    echo "Mysql is already installed nothing to do"
+    echo "Mysql is not installed.....going to install"
+    VALIDATE $? "Mysql"
 fi
-
 

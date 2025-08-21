@@ -24,6 +24,7 @@ then
     echo "Installing mysql is success.....nothing to do"
 else
     echo "Mysql is not installed.....going to install"
+    dnf install mysql -y
     VALIDATE $? "Mysql"
 fi
 
@@ -33,6 +34,7 @@ then
     echo "Installing nginx is success.....nothing to do"
 else
     echo "nginx is not installed.....going to install"
+    dnf install nginx -y
     VALIDATE $? "nginx"
 fi
 
@@ -42,5 +44,6 @@ then
     echo "Installing Python is success.....nothing to do"
 else
     echo "python is not installed.....going to install"
+    dnf install python -y
     VALIDATE $? "Python"
 fi

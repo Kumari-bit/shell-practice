@@ -27,3 +27,20 @@ else
     VALIDATE $? "Mysql"
 fi
 
+dnf list installed nginx
+if [ $? -eq 0 ]
+then    
+    echo "Installing nginx is success.....nothing to do"
+else
+    echo "nginx is not installed.....going to install"
+    VALIDATE $? "nginx"
+fi
+
+dnf list installed Python
+if [ $? -eq 0 ]
+then    
+    echo "Installing Python is success.....nothing to do"
+else
+    echo "python is not installed.....going to install"
+    VALIDATE $? "Python"
+fi

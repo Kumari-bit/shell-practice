@@ -4,13 +4,13 @@ USER=$(id -u)
 
 if [ $USER -ne 0 ]
 then
-    echo -e "e\32m ERROR: Please run the script with root access e\0m"
+    echo -e "ERROR: Please run the script with root access"
     exit 1
 else
     echo "User is running with root access"
 fi
 
-echo "Starting MySQL installation..."
+
 
 dnf list installed mysql
 

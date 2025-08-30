@@ -18,6 +18,7 @@ VALIDATE() {
         echo "Installing $2 is failure"
         exit 1
     fi
+}
 
 dnf list installed mysql
 

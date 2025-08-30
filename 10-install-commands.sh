@@ -36,7 +36,7 @@ dnf list installed nginx
 if [ $? -ne 0 ]
 then
     echo "Nginx is not installed... going to install it"
-    dnf install nginx-server -y
+    dnf install nginx -y
     if [ $? -eq 0 ]
     then
         echo "Installing nginx is success"
@@ -50,19 +50,19 @@ fi
 
 echo "Starting Python3 installation..."
 
-dnf list installed Python3
+dnf list installed Python 3
 
 if [ $? -ne 0 ]
 then
-    echo "Python3 is not installed... going to install it"
-    dnf install python3-server -y
+    echo "Python 3 is not installed... going to install it"
+    dnf install python 3 -y
     if [ $? -eq 0 ]
     then
-        echo "Installing python3 is success"
+        echo "Installing python 3 is success"
     else
-        echo "Installing python3 is failure"
+        echo "Installing python 3 is failure"
         exit 1
     fi
 else
-    echo "Python3 is already install nothing to do"
+    echo "Python 3 is already install nothing to do"
 fi

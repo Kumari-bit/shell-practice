@@ -1,7 +1,9 @@
 #! /bin/bash
 
-hello_world(){ 
-  echo "Hello World"
+a=1
+increment(){ 
+  a=$((a+1))
   return
 }
-hello_world
+increment
+echo "$a"

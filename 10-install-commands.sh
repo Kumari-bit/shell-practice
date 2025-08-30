@@ -55,7 +55,7 @@ dnf list installed Python 3
 if [ $? -ne 0 ]
 then
     echo "Python 3 is not installed... going to install it"
-    dnf install python 3 -y
+    dnf install python3 -y
     if [ $? -eq 0 ]
     then
         echo "Installing python 3 is success"

@@ -4,7 +4,7 @@ USER=$(id -u)
 
 if [ $USER -ne 0 ]
 then
-    echo "ERROR: Please run the script with root access"
+    echo -e "e\32m ERROR: Please run the script with root access e\0m"
     exit 1
 else
     echo "User is running with root access"

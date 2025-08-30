@@ -15,7 +15,7 @@ read name
 
 echo "your name is : $name"
 
-echo enter your school
+
 
 read school
 

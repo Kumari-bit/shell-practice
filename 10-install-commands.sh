@@ -50,19 +50,19 @@ fi
 
 echo "Starting Python3 installation..."
 
-dnf list installed Python 3
+dnf list installed Python3
 
 if [ $? -ne 0 ]
 then
-    echo "Python 3 is not installed... going to install it"
+    echo "Python3 is not installed... going to install it"
     dnf install python3 -y
     if [ $? -eq 0 ]
     then
-        echo "Installing python 3 is success"
+        echo "Installing python3 is success"
     else
-        echo "Installing python 3 is failure"
+        echo "Installing python3 is failure"
         exit 1
     fi
 else
-    echo "Python 3 is already install nothing to do"
+    echo "Python3 is already install nothing to do"
 fi

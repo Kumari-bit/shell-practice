@@ -1,7 +1,7 @@
 #! /bin/bash
 
-echo "hello world"
-
-echo $0
-
-echo "enter your pin"
+hello_world(){ 
+  echo "Hello World"
+  return
+}
+hello_world

@@ -6,4 +6,4 @@ echo "$GREETING"
 
 echo "PID of Script-1: $$"
 
-    
+    source ./script-2.sh

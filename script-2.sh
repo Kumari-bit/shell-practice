@@ -3,3 +3,5 @@
 echo "PID of Script-2: $$"
 
 echo "$GREETING"
+
+source ./script-1.sh
